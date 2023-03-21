@@ -1,4 +1,4 @@
-﻿//Задание 1
+﻿////Задание 1
 //class Program
 //{
 //    static void Main(string[] args)
@@ -47,8 +47,12 @@ PrintSet(list2);
 PrintSet(list3);
 PrintSet(list4);
 PrintSet(list5);
-Console.WriteLine("Входит во 2 множество:");
-PrintSet(list2);
+
+Console.WriteLine("Входит во все множества:");
+PrintSet(list1.Intersect(list2).Intersect(list3).Intersect(list4).Intersect(list5));
+
+Console.WriteLine("НЕ входит ни в одно множества:");
+PrintSet(allList.Except(list1).Except(list2).Except(list3).Except(list4).Except(list5));
 
 Console.WriteLine("Входят во второе множество, но их нет в четвертом:");
 PrintSet(list2.Except(list4));
